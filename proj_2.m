@@ -36,3 +36,21 @@ for i = 1:10
 end
 
 %% III. A Neuron
+
+% inputs=[1 2]; weights=[3 4];      % test data
+% NET=computeNET(inputs,weights);
+% OUT=f(NET)
+
+function NET = computeNET(inputs, weights)
+NET = sum(inputs.*weights)
+end
+
+function OUT = f(NET)
+OUT = 1/(1 + exp(-NET)) % Sigmoidal activation function
+end
+
+%% III.a Verify derivative of Sigmoidal fxn
+
+syms x
+f = 1/(1 + exp(-x))
+diff(f)
