@@ -35,3 +35,4 @@ for i = 1:10
     colormap(gray(256)), axis square tight off;
 end
 
+%% III. A Neuron
