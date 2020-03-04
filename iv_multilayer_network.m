@@ -2,17 +2,17 @@
 
 load mnist_all.mat
 
-test = test0;
+train = train0;
 nNeurons = 20 % arbitrary
 nHidLayers = 1 % should be variable
-w1 = rand(size(test)) % weights mapping input layer to hidden layer..sizing (?)
+w1 = rand(size(train)) % weights mapping input layer to hidden layer..sizing (?)
 %weights = {w1,w2}
-target = 0 % corresponds to test(#) and will be used in error calculation
+target = 0 % corresponds to train(#) and will be used in error calculation
 
-function output = multiLayerNetwork(test, weights, nNeurons, nHidLayers)
+function output = multiLayerNetwork(train, weights, nNeurons, nHidLayers)
 
     for i=1:nNeurons
-    NET = computeNET(test(i,:),w1(i,:));
+    NET = computeNET(train(i,:),w1(i,:));
     output = f(NET);
     end
     
