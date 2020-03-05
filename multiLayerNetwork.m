@@ -18,6 +18,6 @@ NET = inputWeights*inputs;
 end
 
 function OUT = f(NET)
-OUT = 1/(1 + exp(-NET)); % Sigmoidal activation function
-OUT = OUT';
+OUT = 1./(1 + exp(-NET)); % Sigmoidal activation function
+%OUT = OUT';
 end
