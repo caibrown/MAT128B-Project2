@@ -60,6 +60,41 @@ for l=1:10
     disp('Network''s guess:');disp(guess(:,l))
 end
 
+% %% Test
+% testCell = {...
+%     double(test0(1:500,:))',...
+%     double(test1(1:500,:))',...
+%     double(test2(1:500,:))',...
+%     double(test3(1:500,:))',...
+%     double(test4(1:500,:))',...
+%     double(test5(1:500,:))',...
+%     double(test6(1:500,:))',...
+%     double(test7(1:500,:))',...
+%     double(test8(1:500,:))',...
+%     double(test9(1:500,:))',...
+%     };
+% 
+% testGuessMean = zeros(10);
+% 
+% for k=1:10
+%     testMatrix = testCell{k};
+%     testGuess = zeros(10,500);  
+%     for j=1:500
+% 
+%         testDig = testMatrix(:,j);
+%         [~, testGuess(:,j)] = multiLayerNetwork(testDig, weights, nHidLayers);
+% 
+%     end
+%     
+%     testGuessMean(:,k) = mean(testGuess,2);
+% end
+% 
+% disp('~Test Results~')
+% for l=1:10
+%     disp('Digit:');disp(l-1)
+%     disp('Network''s guess:');disp(testGuessMean(:,l))
+% end
+
 % local fxns
 function OUT = f(NET)
 OUT = 1./(1 + exp(-NET));
