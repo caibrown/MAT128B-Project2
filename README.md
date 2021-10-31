@@ -17,4 +17,4 @@ For MAT128B, numerical linear algebra @ UC Davis, WQ '20.
 
 * multiLayerNetwork.m feeds forward
 
-* train.m and test.m train and test the network respectively, and return its multi-class guess in the form of a probability distribution corresponding to digits 0-9.
+* train.m and test.m train and test the network respectively, and return its average multi-class guess for a given target 0-9 in the form of a probability distribution corresponding to digits 0-9.
